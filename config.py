@@ -6,7 +6,7 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'thanhht18lab1'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'kztXu8DqkJrSDAlvpZKkEB6oLTxfmakq2Z1i28itvLQeGe05l5fyCeQxp5QyqvqrGYu08FhOGp06+AStlgKeUA=='
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'A1WeaNa0G49ZuQJI1c0IeIvU5Tw7spOIEg4dDFRF0dO7kgCRVyK9RYML1rzL76FADUR1MRvkEZlB+AStIgQVuw=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'thanhht18-lab1-webappdb.database.windows.net'
