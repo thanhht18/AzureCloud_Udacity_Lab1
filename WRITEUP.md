@@ -1,34 +1,25 @@
 # Write-up
 
-## Analyze, choose, and justify the appropriate resource option for deploying the app.
+## Analyze, Choose, and Justify the Appropriate Resource Option for Deploying the App.
 
-### Appropriate solution
-I choose Azure App Service to deploy this excercise.
+### Appropriate Solution
+I choose Azure App Service to deploy this exercise.
 
-### Why I choose App service
-- Azure App service has a built-in infrastructure maintenance, security patching, and scaling.
-- Azure App service Support multiple languages, such as .NET, .NET Core, Java,  PHP, Python,...
-- Azure app service allows me to quickly build, deploy, and scale my web app
+### Why I Chose App Service
+- Azure App Service simplifies deployment. I don't need to worry about the underlying infrastructure, security, or networking. This allows me to focus solely on my application code and not worry about server management tasks.
+- Deploying Flask applications to Azure App Service is straightforward. I can deploy directly from a Git repository, simplifying the deployment process and reducing downtime.
+- Azure App Service integrates with various managed services like Azure SQL Database, simplifying database management.
 
-### Why not Virtual Machines
-- I don't want to control the underlying Operating System or install a software on the server.
-- Using App service I can quickly deploy my web application setup environment and right now i not enought knowleague to do all that.
+### Why Not Virtual Machines
+- Setting up and configuring VMs is complex, especially for those without expertise in server administration. You need to handle network configurations, security settings, and software installations.
+- Unlike Azure App Service, VMs take more time to manage the entire infrastructure stack, resulting in slower application deployment.
 
-### Justification based on cost, scalability, avaliability and workflow:
+### Justification Based on Cost, Scalability, Availability, and Workflow:
 
-- Cost: Azure App service is less expensive than Virtual Machines. It provide different plans options such as Free and Shared (preview) plans to test or deploy an app
+- Cost: With Azure App Service, you only pay for the resources you consume. It can be more cost-effective than running and managing VMs, especially for smaller to moderately sized applications like this Flask app.
 
-- Scalability: Azure provides developer with the possibility to easily scale his apps either horizontally or vertically. vertical scaling automatically increases or decreases resources allocated to our App Service, such as the amount of vCPUs or RAM, by changing the App Service pricing tier. Horizontal scaling increases or decreases the number of Virtual Machine instances our App Service is running.
+- Scalability: Azure App Service makes it easy to scale the application vertically by adjusting the number of instances or horizontally using auto-scaling based on demand. This ensures that my Flask web app can handle varying levels of traffic without manual intervention.
 
-- Availability: Global scale with high availability. Using App service I can host my app anywhere in Microsoft's global datacenter infrastructure, and the App Service SLA promises high availability.
+- Availability: Azure App Service automatically load-balances incoming traffic across multiple instances, providing high availability and improved reliability.
 
-- Workflow: Azure App service support automated deployments from GitHub, Azure DevOps, or any Git repository. With GitHub Actions for Azure web app, developer can create workflows in github repository to build, test, package, release and deploy to Azure. 
-
-
-### Assess app changes that would change your decision.
-
-- Azure app service has a hardware limitations. Also is not an appropriate solution for apps which have scope to expand for future. Instead, VMs are preferred. If this app grows to a larger scale, when we have vast increase in the number of users or when more features are added to the app, I would choose a Virtual Machine.
-
-- For advanced scaling (auto) and traffic management features, I would go for VM.
-
-- Using App service, I have limited access to the host server, if I want to control the underlying OS or install a software on the server, I have to choose Virtual Machine.
+- Workflow: Azure App Service supports automated deployments from GitHub, Azure DevOps, or any Git repository. With GitHub Actions for Azure web apps, developers can create workflows in GitHub repositories to build, test, package, release, and deploy to Azure.
